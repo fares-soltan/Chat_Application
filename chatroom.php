@@ -2,7 +2,7 @@
 <?php 
 session_start();
 ob_start();
-include("database/Database_connection.php");
+include("include/Database_connection.php");
 if(!isset($_SESSION['user_email'])){
     header("location:login.php");
 }
@@ -64,12 +64,12 @@ if(!isset($_SESSION['user_email'])){
                 </form>
           <?php 
             if(isset($_POST['name'])){
-                header("location:database/add_friends.php");
+                header("location:include/add_friends.php");
             }
           ?>
       </div>
         
-     <?php include("database/get_users_data.php"); ?>  
+     <?php include("include/get_users_data.php"); ?>  
     </div>
 
     <div class="col-md-8">

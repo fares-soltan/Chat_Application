@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("database/Database_connection.php");
+include("include/Database_connection.php");
 $error = false;
 if(isset($_POST['register'])){
     $name =htmlentities(mysqli_real_escape_string($connect,$_POST['user_name']));
